@@ -1,2 +1,1 @@
-# restudy-javaScript
-重学javaScript
+# 重学 javaScript
