@@ -40,3 +40,31 @@
 为什么我们只需要知道 V8 引擎?
 
 ## V8
+
+V8 介绍
+
+V8 是用 C++编写的 Google 开源高性能 javascript 和 webAssembly 引擎 它用于 Chrome 和 nodejs
+它实现 ECMAScript 和 WebAssembly
+V8 可以独立运行也可以嵌入到任何 C++应用中
+
+所以我们可知 js 寄生于 V8
+
+## js 代码编译过程
+
+1. js 代码通过 V8 的 Parse 模块 解析为 AST 抽象语法树
+   这一部分的核心就是对 `var redux` 所有的 js 语句进行 **词法分析** **语法分析**
+   词法分析就是对每一个词进行**扫描** 一般就是 js 关键字 变量名 值 最后生成海量的 tokens
+   这些 tokens 会以一种数组对象方式进行存储 [{},{}]
+   比方说上面语句经过词法分析后的结构就是 tokens:
+
+   ```js
+   [
+     { type: "keyword", value: "var" },
+     { type: "identifier", value: "redux" },
+   ];
+   ```
+
+   语法分析主要是生成 AST 语法抽象树
+   在线 js 代码 AST 抽象语法树 https://astexplorer.net/
+
+2.
