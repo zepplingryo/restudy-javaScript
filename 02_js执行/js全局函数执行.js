@@ -34,6 +34,10 @@
  * 函数可以函数上方调用 : 预解析时将父级作用域记录 函数内部执行代码保存
  * 以及 全局下变量和函数内部变量都有着相同的行为 -- (变量提升) AO GO
  * 
+ * 在最后时候我们打印了msg 但是我们当前foo局部中并没有foo 那他将会如何查找呢?
+ * 
+ * 当我们查找一个变量时 真实的查找路径饰沿着作用域链来查找的
+ * 
  */
 var msg = "Hello";
 
@@ -45,7 +49,8 @@ function foo() {
   function bar() {
     return "bar";
   }
-  return "hello Redux";
+  console.log(msg);
+  return msg
 }
 
 foo();
