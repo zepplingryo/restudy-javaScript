@@ -7,3 +7,9 @@
 但是 js 中的 this 更加灵活 无论是它出现的位置还是它代表的含义
 
 ## this 的几种指向
+
+- 全局下 window/global
+- 全局下普通函数中 this 指向
+- 对象中的 this
+- 改变 this 指向
+- 剪头函数中的 this
