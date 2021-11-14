@@ -11,7 +11,7 @@ function foo() {
   var age = 10101001010;
 
   function bar() {
-    console.log(name, age);
+    console.log(name);
   }
 
   return bar;
@@ -20,3 +20,9 @@ function foo() {
 var fo = foo();
 
 fo();
+
+/**
+ * 同时呢我这边没有用到age属性 但是这个属性就不再AO中了
+ *
+ * 因为没有用到 js引擎就对此进行优化 并没有按照ECMA规范进行实现
+ */
