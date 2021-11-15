@@ -33,7 +33,13 @@ obj.foo(); // { name: 'foo', foo: [Function: foo] }
 foo.apply(obj); // { name: 'foo', foo: [Function: foo] }
 
 /**
- * 最后得出一个结论 this指向什么 跟他所处的位置是没有关系的
+ * 最后得出结论
+ *
+ * this指向什么 跟他所处的位置是没有关系的
+ * 函数调用时 js会默认给this绑定一个值
+ * this的绑定和定义的位置(编写的位置)没有关系
+ * this的绑定和调用方式以及调用的位置有关系
+ * this是在运行时被绑定的
  *
  * 只有跟函数被调用的方式有关
  */
