@@ -35,7 +35,3 @@ var obj2 = {
 
 // 逆天
 (obj2.bar = obj1.foo)(); // window
-
-/**
- *
- */

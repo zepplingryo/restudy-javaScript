@@ -29,6 +29,40 @@ const a = bar(1);
 console.log(a);
 
 /**
- *
- *
+ * 箭头函数不使用this的四种保准规则(意味着剪头函数不绑定this) 而是根据外层作用域来决定this
  */
+
+// 箭头函数this指向
+var name = "why";
+var foo = () => {
+  console.log(this);
+};
+var obj = { foo };
+
+foo();
+obj.foo();
+foo.call("abc");
+
+// 应用场景 以前解决问题的办法
+var obj = {
+  data: [],
+  getData: function () {
+    var self = this; // 利用闭包 存储obj的this
+    setTimeout(function () {
+      // setTimeout里面this默认是全局的
+      var res = [1, 2, 3, 4];
+      self.data = res;
+    });
+  },
+};
+
+var obj = {
+  data: [],
+  // 去找上层作用域中绑定的this
+  getData: function () {
+    setTimeout(() => {
+      var res = [1, 2, 3, 4];
+      this.data = res;
+    });
+  },
+};
