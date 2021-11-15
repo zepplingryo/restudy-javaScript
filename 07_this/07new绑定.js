@@ -9,7 +9,15 @@
  * 4. 如果函数没有返回其他对象 表达式就会返回这个新对象
  */
 
-function React(a, b) {}
+function React(a, b) {
+  this.a = a;
+  this.b = b;
+}
+
+// 由此说明new优先级比显式绑定要高
+React.bind({});
 
 var a = new React("1", 2);
 var b = new React(2, 1);
+
+console.log(a, b);
