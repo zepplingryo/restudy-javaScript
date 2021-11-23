@@ -16,10 +16,17 @@ function foo() {
   console.log(arguments.length);
   console.log(arguments.callee);
 
-  // 类数组转数组
+  /**
+   * 类数组转数组
+   */
   var newArr = Array.prototype.slice.call(arguments);
   // var newArr = [].slice.call(arguments) // 这个两个就能看到显示绑定和隐式绑定的效果了
   console.log(newArr);
+
+  // es6语法
+  var newArr2 = Array.form(arguments);
+
+  var newArr3 = [...arguments];
 }
 
 const bar = () => {
