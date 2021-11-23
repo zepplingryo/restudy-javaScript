@@ -9,7 +9,8 @@ Function.prototype._apply = function (thisArg, argArray) {
 
   var fn = this;
 
-  thisArg = thisArg ? Object(thisArg) : window;
+  thisArg =
+    thisArg !== null && thisArg !== undefined ? Object(thisArg) : window;
 
   thisArg.fn = fn;
 
