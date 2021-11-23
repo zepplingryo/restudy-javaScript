@@ -1,3 +1,7 @@
+/**
+ * 这个函数就是一个纯函数
+ */
+
 Array.prototype._slice = function (start, end) {
   var arr = this;
 
