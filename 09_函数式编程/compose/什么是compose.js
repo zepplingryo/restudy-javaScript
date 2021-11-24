@@ -31,3 +31,23 @@ const result2 = compose(foo1, foo2)(10);
 console.log(result2);
 
 // 更多的compose 参数
+function compose(...fns) {
+  var length = fus.length;
+
+  for (var i = 0; i < length; i++) {
+    if (typeof fns[i] === "function") {
+      throw new TypeError("expected arguments are functions");
+    }
+  }
+
+  return function (...args) {
+    var index = 0;
+    var result = length ? fns[index].apply(this, args) : args;
+
+    while (++index < length) {
+      fns[index].call(this, result);
+    }
+
+    return result;
+  };
+}
