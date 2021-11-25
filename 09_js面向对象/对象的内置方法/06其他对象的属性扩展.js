@@ -28,7 +28,7 @@ Object.seal(obj);
 delete obj.name;
 console.log(obj.name);
 
-// 禁止对象属性修改
+// 禁止对象属性修改 这个很有趣 冻结只是冻结一级属性
 Object.freeze(obj);
 obj.address = "src";
 
