@@ -16,3 +16,9 @@ const obj1 = new Person(1, 1);
 const obj2 = new Person(1, 1);
 
 console.log(obj1 === obj2); // false
+
+/**
+ * 构造函数的缺点:
+ *
+ * 当我们创建多个对象时 内部如果有函数对象 随之会创建多个函数对象 占用内存
+ */
