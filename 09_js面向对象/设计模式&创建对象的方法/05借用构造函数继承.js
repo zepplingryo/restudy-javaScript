@@ -3,8 +3,8 @@
  */
 
 function Person(name, age) {
-  // Student.name 变化
-  this.name = "zepp";
+  // Student.name 变 化
+  this.info = "zepp";
   this.friends = [];
 }
 
@@ -31,3 +31,9 @@ const s2 = new Student(3, 3, 3);
 
 s1.friends.push("1");
 console.log(s2.friends);
+
+/**
+ * Person类被调用至少两次
+ *
+ * 子类原型上会多一些属性 但是这些属性没有存在的必要
+ */
