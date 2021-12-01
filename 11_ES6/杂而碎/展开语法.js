@@ -19,3 +19,17 @@ const obj = { address: "113", ...info, ...names };
 console.log(obj);
 
 // rest是一种浅拷贝
+
+const infoObj = {
+  name: "zepp",
+  friends: {
+    name: "asd",
+  },
+};
+
+const otherObj = { ...infoObj, address: "sbr" };
+
+// 究其原因是因为在复制过程中 只是复制了friends这个变量的引用地址
+infoObj.friends.name = "qwe";
+
+console.log(othoer.friends.name);
