@@ -37,6 +37,13 @@ new Promise((resolve, reject) => {
     console.log(rej);
   });
 
+// 也可以拿出写
+const obj = {
+  then: function (resolve, reject) {
+    resolve("成功");
+  },
+};
+
 new Promise((resolve, reject) => {
   // pending => fulfilled
   const obj = {
@@ -54,6 +61,6 @@ new Promise((resolve, reject) => {
   });
 
 // eatable
-const obj = {
-  eat() {},
-};
+// const obj = {
+//   eat() {},
+// };
