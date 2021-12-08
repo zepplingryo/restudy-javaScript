@@ -4,6 +4,8 @@ const p1 = new Promise((resolve, reject) => {
   }, 100);
 });
 
+// 1 29 08
+
 const p2 = new Promise((resolve, reject) => {
   setTimeout(() => {
     reject(2222);
