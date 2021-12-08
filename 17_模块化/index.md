@@ -69,3 +69,6 @@ module.exports = {
 - node 运行 js 脚本其实就是吧 js 文件当成一个模块进行运行 会将这个模块放到一个函数中单独来执行
 - 这个模块中包括 CJS 规范的核心变量 exports module.exports require
 - 我们可以使用这些变量来方便的进行模块化开发
+
+exports 和 module.exports 可以负责对模块中的内容进行导出
+require 函数可以帮助我们导入其他模块(自定义模块 系统模块 第三方库模块)中的内容
