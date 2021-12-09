@@ -72,3 +72,7 @@ module.exports = {
 
 exports 和 module.exports 可以负责对模块中的内容进行导出
 require 函数可以帮助我们导入其他模块(自定义模块 系统模块 第三方库模块)中的内容
+
+### CJS 原理
+
+### require 查找机制
