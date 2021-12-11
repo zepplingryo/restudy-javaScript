@@ -76,3 +76,14 @@ require 函数可以帮助我们导入其他模块(自定义模块 系统模块 
 ### CJS 原理
 
 ### require 查找机制
+
+### ES module 和 CJS 模块化不同之处
+
+- 一方面使用 import 和 export 关键字
+- 另一方面它采用编译器的静态分析 并且加入了动态引入
+
+### ES module 初体验
+
+export 负责将模块内的内容导出
+import 负责从其他模块导入内容
+采用 ES module 将自动采用严格模式 `use strict`
