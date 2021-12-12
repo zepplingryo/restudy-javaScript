@@ -2,6 +2,7 @@
 
 # dependencies
 /node_modules
+/17_模块化/15CJSESM/node_modules
 /.pnp
 .pnp.js
 /plan.md
